@@ -8,6 +8,12 @@ let registration = [
     "country" , "state"
 ]
 
+let C2States = {
+    "india" : ["Kerala" , "Karnataka"],
+    "uae" : ["Dubai" , "Qatar"],
+    "germany" : ["Hamburg" , "Bavaria"]
+}
+
 
 function validate() {
     let raidoChecked = true
@@ -37,5 +43,27 @@ function validate() {
     if (!raidoChecked) {
         alert("gender not filled")
 
+    }
+}
+
+function ChangeStates() {
+    let country = document.getElementById("country").value
+    let state = document.getElementById("state")
+    
+    state.childNodes.forEach(child => {
+        state.removeChild(child)
+    })
+
+    state.value = "Select a State"
+
+    if (C2States[country]) {
+        C2States[country].forEach(element => {
+            let option = document.createElement("option")
+            option.value = element
+            option.text = element
+
+            state.appendChild(option)
+        })
+        
     }
 }
