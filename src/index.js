@@ -2,7 +2,10 @@
 let registration = [
     // input inu id kodukana same names
 
-    "name" , "age" , "phone" , "male" , "female" , "address", 
+    "name" , "age" , "phone" , 
+    "male" , "female" ,
+    "address", 
+    "country" , "state"
 ]
 
 
@@ -25,8 +28,6 @@ function validate() {
                 raidoChecked = false
             }
         }
-
-        
         else if (element == "address") {
             if (value.trim() == "") {
                 alert(element + " not filled")
