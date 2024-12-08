@@ -50,9 +50,9 @@ function ChangeStates() {
     let country = document.getElementById("country").value
     let state = document.getElementById("state")
     
-    state.childNodes.forEach(child => {
-        state.removeChild(child)
-    })
+
+    state.innerHTML = '<option value="">Select a state</option>';
+
 
 
     if (C2States[country]) {
