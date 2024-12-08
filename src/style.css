@@ -34,11 +34,12 @@ body {
 #form1 {
     color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
 
-    margin: 50px auto auto 200px ;
 }
 #tab1 {
-    width: 70%;
+    width: 90%;
     color: wheat;
     border: white;
     justify-content: center;
@@ -53,7 +54,6 @@ body {
     justify-content: center;
     
 }
-
 
 .pad {
     padding: 20px;
@@ -80,5 +80,9 @@ body {
     color: #89CFF0;
     text-align: center;
     padding: 10px;
+}
+
+textarea {
+    height: 100px;
 }
 

@@ -18,8 +18,8 @@
 
     </div>
 
-    <form id="form1">
-        <table id = "tab1" border="1" >
+    <form id="form1" method="post">
+        <table id = "tab1" >
                 <tr >
                     <td class="pad" colspan="3">
                         <h1>Registration Form</h1>
@@ -32,7 +32,7 @@
                     <td>:</td>
 
                     <td>
-                        <input class="inp" id="name" type="text">
+                        <input class="inp" id="name" type="text" onchange="validate('name' , 'text')">
                     </td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
                     <td>:</td>
 
                     <td>
-                        <input class="inp" id="age" type="text">
+                        <input class="inp" id="age" type="number">
                     </td>
                 </tr>
                 <tr>
@@ -51,7 +51,48 @@
                     </td>
                     <td>:</td> 
                     <td>
-                        <input class="inp" id="phone" type="text">
+                        <input class="inp" id="phone" type="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="pad">
+                        Gender
+                    </td>
+                    <td>:</td>
+                    <td>
+                        Male<input class="inp" id="male" type="radio" name="gender" value="2">
+                        Female<input class="inp" id="female" type="radio" name="gender" value="0">
+                     </td>
+                </tr>
+                <tr>
+                    <td class="pad">
+                        Address
+                    </td>
+                    <td><b>:</b></td>
+                    <td><textarea class="inp" name="Address" id="address">
+
+                    </textarea></td>
+                </tr>
+                <tr>
+                    <td class="pad">Country</td>
+                    <td><b>:</b></td>
+                    <td><select class="inp" name="country" id="country">
+                        <option value="india">India</option>
+                        <option value="uae">UAE</option>
+                        <option value="germany">Germany</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="pad">State</td>
+                    <td><b>:</b></td>
+                    <td>
+                        <select class="inp" name="State" id="State">
+                          <option value="kerala">Kerala</option>
+                          <option value="tamil nadu">Tamil nadu</option>
+                          <option value="karnataka">Karnataka</option>
+                          <option value="goa">Goa</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -59,9 +100,10 @@
                         <a class="links" href="login.html">login here</a>
                     </td>
                     <td class="pad"  colspan="2">
-                        <button id="btn" >Submit</button>
+                        <input type="button" id="btn" onclick="validate()" value="Submit">
                     </td>
                 </tr>
+                
         </table>
     </form>
 </body>
