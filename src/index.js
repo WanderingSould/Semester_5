@@ -54,7 +54,6 @@ function ChangeStates() {
         state.removeChild(child)
     })
 
-    state.value = "Select a State"
 
     if (C2States[country]) {
         C2States[country].forEach(element => {
