@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showcase</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'PT Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: url("bg.png") no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background: linear-gradient(90deg, #ff0000, #333);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            border-bottom: 5px solid #f4c300;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #f4c300;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #ff0000;
+            color: #fff;
+        }
+        section {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+            position: relative;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            color: #f4c300;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .car {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #333333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .car img {
+            max-width: 300px;
+            border-radius: 10px;
+            margin-right: 20px;
+            border: 2px solid #f4c300;
+        }
+        .car div {
+            flex: 1;
+        }
+        .car h3 {
+            font-size: 22px;
+            color: #f4c300;
+            margin-bottom: 10px;
+        }
+        .car p {
+            margin: 5px 0;
+            color: #ddd;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .car p.model {
+            font-weight: bold;
+            font-size: 18px;
+            color: #fff;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #777;
+            background: #1f1f1f;
+            border-top: 5px solid #ff0000;
+        }
+        .footer a {
+            color: #f4c300;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <header>Car Showcase</header>
+    <nav>
+        <a href="javascript:void(0);" onclick="showSection('luxury-cars')">Luxury Cars</a>
+        <a href="javascript:void(0);" onclick="showSection('sports-cars')">Sports Cars</a>
+        <a href="javascript:void(0);" onclick="showSection('sedans')">Sedans</a>
+        <a href="javascript:void(0);" onclick="showSection('crossover-suvs')">Crossover SUVs</a>
+    </nav>
+    <!-- Luxury Cars Section -->
+    <section id="luxury-cars">
+        <h2>Luxury Cars</h2>
+        <div class="car">
+            <img src="images/range.png" alt="Luxury Car">
+            <div>
+                <h3>Land Rover Range Rover</h3>
+                <p class="model">Brand: Land Rover</p>
+                <p>Price: ₹2.40 - 4.98 Crore</p>
+                <p>Features: Engine 2998 cc, Mileage 13.16 kmpl, Seating Capacity 5.</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="images/toyota.png" alt="Luxury Car">
+            <div>
+                <h3>Toyota Vellfire</h3>
+                <p class="model">Brand: Toyota</p>
+                <p>Price: ₹1.22 - 1.32 Crore</p>
+                <p>Features: Engine 2487 cc, Mileage 16 kmpl, Seating Capacity 7.</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="images/bmw.png" alt="Luxury Car">
+            <div>
+                <h3>BMW X7</h3>
+                <p class="model">Brand: BMW</p>
+                <p>Price: ₹1.30 - 1.33 Crore</p>
+                <p>Features: Engine 2998 cc, Mileage 14.31 kmpl, Seating Capacity 6.</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="images/rolls.png" alt="Luxury Car">
+            <div>
+                <h3>Rolls-Royce Cullinan</h3>
+                <p class="model">Brand: Rolls-Royce</p>
+                <p>Price: ₹10.50 - 12.25 Crore</p>
+                <p>Features: Engine 6750 cc, Mileage 6.6 kmpl, Seating Capacity 5.</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="images/porshe.png" alt="Luxury Car">
+            <div>
+                <h3>Porsche Cayenne</h3>
+                <p class="model">Brand: Porsche</p>
+                <p>Price: ₹1.42 - 2 Crore</p>
+                <p>Features: Engine 2894 cc, Mileage 10.8 kmpl, Seating Capacity 4.</p>
+            </div>
+        </div>
+    </section>
+<!-- Sports Cars Section -->
+<section id="sports-cars">
+    <h2>Sports Cars</h2>
+    <div class="car">
+        <img src="images/ccxr.jpg" alt="Sports Car">
+        <div>
+            <h3>Koenigsegg CCXR Trevita</h3>
+            <p class="model">Brand: Koenigsegg</p>
+            <p>Price: $4.8 million (approximately ₹39 crore)</p>
+            <p>Features: Engine 4.7L V8, Power 1018 horsepower, Top Speed 254 mph.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/lambo.jpg" alt="Sports Car">
+        <div>
+            <h3>Lamborghini Veneno Roadster</h3>
+            <p class="model">Brand: Lamborghini</p>
+            <p>Price: $4.5 million (approximately ₹36 crore)</p>
+            <p>Features: Engine 6.5L V12, Power 740 horsepower, Top Speed 221 mph.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/lykan.jpg" alt="Sports Car">
+        <div>
+            <h3>Lykan Hypersport</h3>
+            <p class="model">Brand: W Motors</p>
+            <p>Price: $3.4 million (approximately ₹28 crore)</p>
+            <p>Features: Engine 3.7L Twin-turbocharged flat-six, Power 780 horsepower, Top Speed 245 mph.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/bugatti.jpg" alt="Sports Car">
+        <div>
+            <h3>Bugatti La Voiture Noire</h3>
+            <p class="model">Brand: Bugatti</p>
+            <p>Price: $18.8 million (approximately ₹158 crore)</p>
+            <p>Features: Engine 8.0L Quad-turbocharged W16, Power 1,500 PS, Top Speed 261 mph.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/pagani.jpg" alt="Sports Car">
+        <div>
+            <h3>Pagani Zonda HP Barchetta</h3>
+            <p class="model">Brand: Pagani</p>
+            <p>Price: $17 million (approximately ₹144 crore)</p>
+            <p>Features: Engine 7.3L V12, Power 789 horsepower, Top Speed 221 mph.</p>
+        </div>
+    </div>
+</section>
+<!-- Sedans Section -->
+<section id="sedans">
+    <h2>Sedans</h2>
+    <div class="car">
+        <img src="images/rolls2.png" alt="Sedan">
+        <div>
+            <h3>Rolls-Royce Phantom</h3>
+            <p class="model">Brand: Rolls-Royce</p>
+            <p>Price: ₹8.99 - 10.48 Crore</p>
+            <p>Features: Engine 6.75-liter V12, Mileage 7.0 kmpl, Seating Capacity 5.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/bmw2.jpg" alt="Sedan">
+        <div>
+            <h3>BMW i7</h3>
+            <p class="model">Brand: BMW</p>
+            <p>Price: ₹2.03 - 2.50 Crore</p>
+            <p>Features: Engine Electric, Range 625 km, Seating Capacity 5.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/mer.png" alt="Sedan">
+        <div>
+            <h3>Mercedes-Benz S-Class</h3>
+            <p class="model">Brand: Mercedes-Benz</p>
+            <p>Price: ₹1.79 - 1.90 Crore</p>
+            <p>Features: Engine 2999 cc, Mileage 18 kmpl, Seating Capacity 5.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/ben.jpg" alt="Sedan">
+        <div>
+            <h3>Bentley Flying Spur</h3>
+            <p class="model">Brand: Bentley</p>
+            <p>Price: ₹5.25 - 7.60 Crore</p>
+            <p>Features: Engine 5950 cc, Mileage 12.5 kmpl, Seating Capacity 4.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/taycan.png" alt="Sedan">
+        <div>
+            <h3>Porsche Taycan</h3>
+            <p class="model">Brand: Porsche</p>
+            <p>Price: ₹1.89 - 2.53 Crore</p>
+            <p>Features: Engine Electric, Range 705 km, Seating Capacity 5.</p>
+        </div>
+    </div>
+</section>
+<!-- Crossover SUVs Section -->
+<section id="crossover-suvs">
+    <h2>Crossover SUVs</h2>
+    <div class="car">
+        <img src="images/ben2.jpg" alt="Crossover SUV">
+        <div>
+            <h3>Bentley Bentayga Mulliner</h3>
+            <p class="model">Brand: Bentley</p>
+            <p>Price: ₹4.10 Crore</p>
+            <p>Features: Engine 5950 cc W12, Mileage 7.5 kmpl, Seating Capacity 5, Handcrafted interior, bespoke options, advanced technology.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/aston.png" alt="Crossover SUV">
+        <div>
+            <h3>Aston Martin DBX</h3>
+            <p class="model">Brand: Aston Martin</p>
+            <p>Price: ₹3.82 Crore</p>
+            <p>Features: Engine 3982 cc V8, Mileage 6.99 kmpl, Seating Capacity 5, Luxurious interior, high-performance engine, advanced safety features.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/cap.jpg" alt="Crossover SUV">
+        <div>
+            <h3>Lamborghini Urus Pearl Capsule</h3>
+            <p class="model">Brand: Lamborghini</p>
+            <p>Price: ₹4.18 - 4.57 Crore</p>
+            <p>Features: Engine 3999 cc V8, Mileage 5.5 kmpl, Seating Capacity 5, Unique color options, high-performance engine, luxurious interior.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/mes.jpg" alt="Crossover SUV">
+        <div>
+            <h3>Maserati Levante Trofeo</h3>
+            <p class="model">Brand: Maserati</p>
+            <p>Price: ₹2.38 Crore</p>
+            <p>Features: Engine 3799 cc V8, Mileage 8.6 kmpl, Seating Capacity 5, High-performance engine, luxurious interior, advanced technology.</p>
+        </div>
+    </div>
+    <div class="car">
+        <img src="images/ferrari.jpg" alt="Crossover SUV">
+        <div>
+            <h3>Ferrari Purosangue</h3>
+            <p class="model">Brand: Ferrari</p>
+            <p>Price: ₹5.0 Crore (estimated)</p>
+            <p>Features: Engine 6.5L V12, Mileage 6.5 kmpl, Seating Capacity 4, High-performance engine, luxurious interior, advanced technology.</p>
+        </div>
+    </div>
+</section>
+    <div class="footer">
+        <p>&copy; 2025 Car Showcase. All rights reserved.</p>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+        // Initially hide all sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
